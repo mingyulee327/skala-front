@@ -1,25 +1,28 @@
 /* Noto Sans KR 폰트 적용 */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
 
+/* Base & Typography */
 body {
     font-family: 'Noto Sans KR', sans-serif;
     line-height: 1.6;
-    color: #333333;
-    background-color: #f8f9fa;
+    color: #333;
+    background: #f8f9fa;
     margin: 0;
-    padding: 0;
+}
+
+h1, h2 {
+    color: #2c3e50;
+    margin-bottom: 20px;
 }
 
 h1 {
-    color: #2c3e50;
     border-bottom: 2px solid #2c3e50;
     padding-bottom: 10px;
-    margin-bottom: 20px;
 }
 
 h2 {
     color: #34495e;
-    background-color: #e9ecef;
+    background: #e9ecef;
     padding: 8px 12px;
     border-left: 5px solid #007bff;
     margin-top: 25px;
@@ -32,28 +35,31 @@ a {
 }
 
 a:hover {
-    text-decoration: underline;
     color: #0056b3;
+    text-decoration: underline;
+}
+
+/* Card & Container Layout */
+.container, .trip-card, fieldset {
+    background: #fff;
+    border-radius: 8px;
+    margin-bottom: 20px;
 }
 
 .container {
     max-width: 900px;
     margin: 30px auto;
     padding: 20px 30px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 }
 
 .trip-card {
-    background-color: #ffffff;
     border: 1px solid #e0e0e0;
-    border-radius: 8px;
     padding: 15px;
-    margin-bottom: 20px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
+/* Tables */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -65,34 +71,21 @@ th, td {
     padding: 12px 15px;
     border: 1px solid #dee2e6;
     vertical-align: middle;
+    text-align: center; /* th, td 공통 중앙 정렬 */
 }
 
-th {
-    background-color: #f1f3f5;
-    color: #495057;
+th, .lunch-cell {
+    background: #f1f3f5;
     font-weight: bold;
-    text-align: center;
 }
 
-td {
-    text-align: center;
-}
+th { color: #495057; }
 
-/* 점심시간 셀 전용 클래스 */
-.lunch-cell {
-    text-align: center;
-    font-weight: bold;
-    background-color: #f8f9fa;
-}
-
-
-
+/* Form Controls */
 fieldset {
     border: 1px solid #ced4da;
     border-radius: 6px;
     padding: 20px;
-    margin-bottom: 20px;
-    background-color: #fff;
 }
 
 legend {
@@ -101,6 +94,7 @@ legend {
     padding: 0 10px;
 }
 
+/* Form Inputs & Selects */
 input[type="text"],
 input[type="password"],
 input[type="date"],
@@ -109,11 +103,10 @@ textarea {
     width: 100%;
     max-width: 400px;
     padding: 10px;
-    margin-top: 5px;
-    margin-bottom: 10px;
+    margin: 5px 0 10px;
     border: 1px solid #ced4da;
     border-radius: 4px;
-    box-sizing: border-box; 
+    box-sizing: border-box;
 }
 
 textarea {
@@ -121,31 +114,38 @@ textarea {
     resize: vertical;
 }
 
+/* Buttons Common Style */
 input[type="submit"],
 input[type="reset"] {
     padding: 10px 24px;
-    font-size: 15px;
-    font-weight: bold;
+    font: bold 15px 'Noto Sans KR', sans-serif;
+    color: #fff;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     margin-right: 10px;
 }
 
-input[type="submit"] {
-    background-color: #20c997;
-    color: white;
+input[type="submit"] { background: #20c997; }
+input[type="submit"]:hover { background: #12b886; }
+
+input[type="reset"] { background: #adb5bd; }
+input[type="reset"]:hover { background: #868e96; }
+
+/* Email Inline Group */
+.email-group {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
 }
 
-input[type="submit"]:hover {
-    background-color: #12b886;
+.email-group input[type="text"],
+.email-group select {
+    width: 350px; /* 한 줄로 나란히 배치하기 알맞은 너비 지정 */
+    margin: 0;
 }
 
-input[type="reset"] {
-    background-color: #adb5bd;
-    color: white;
-}
-
-input[type="reset"]:hover {
-    background-color: #868e96;
+.email-group span {
+    font-weight: bold;
+    color: #495057;
 }

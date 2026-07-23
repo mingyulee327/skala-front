@@ -27,14 +27,16 @@
             </p>
             <p>
                 <label for="userEmail">이메일: </label>
-                <input type="text" id="userEmail" name="userEmail" placeholder="example">
-                @
-                <select name="emailDomain">
-                    <option value="direct">직접 입력</option>
-                    <option value="naver.com">naver.com</option>
-                    <option value="gmail.com">gmail.com</option>
-                    <option value="daum.net">daum.net</option>
-                </select>
+                <div class="email-group">
+                    <input type="text" id="userEmail" name="userEmail" placeholder="example">
+                    <span>@</span>
+                    <select name="emailDomain">
+                        <option value="direct">직접 입력</option>
+                        <option value="naver.com">naver.com</option>
+                        <option value="gmail.com">gmail.com</option>
+                        <option value="daum.net">daum.net</option>
+                    </select>
+                </div>
             </p>
         </fieldset>
         <br>
