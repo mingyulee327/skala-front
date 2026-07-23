@@ -132,24 +132,6 @@ input[type="submit"]:hover { background: #12b886; }
 input[type="reset"] { background: #adb5bd; }
 input[type="reset"]:hover { background: #868e96; }
 
-/* Email Inline Group */
-.email-group {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.email-group input[type="text"],
-.email-group select {
-    width: 350px; /* 한 줄로 나란히 배치하기 알맞은 너비 지정 */
-    margin: 0;
-}
-
-.email-group span {
-    font-weight: bold;
-    color: #495057;
-}
-
 /* YouTube 임베딩 중앙 정렬 */
 .video-container {
     text-align: center;
